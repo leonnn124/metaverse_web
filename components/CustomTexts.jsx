@@ -1,9 +1,28 @@
-'use client';
+"use client";
 
-export const TypingText = () => (
-  <p>Typing Text</p>
+import { motion } from "framer-motion";
+import { textContainer, textVariant2 } from "../utils/motion";
+
+export const TypingText = ({ title, textStyle }) => (
+  <motion.p
+    variants={textContainer}
+    className={`font-normal text-[14px] text-secondary-white ${textStyle}`}
+  >
+    {Array.from(title).map((letter, index) => (
+      <motion.span key={index} variants={textVariant2}>
+        {letter === " " ? "\u00A0" : letter}
+      </motion.span>
+    ))}
+  </motion.p>
 );
 
-export const TitleText = () => (
-  <h2>Title Text</h2>
+export const TitleText = ({ title, textStyle }) => (
+  <motion.h2
+    variants={textVariant2}
+    initial="hidden"
+    whileInView="show"
+    className={`mt-[8px] font-bold mt:text-[64px] text-[40px] text-white ${textStyle}`}
+  >
+    {title}
+  </motion.h2>
 );
