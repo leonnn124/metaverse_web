@@ -2,9 +2,6 @@
 const nextConfig = {
   experimental: {
     appDir: false,
-    images: {
-      unoptimized: true,
-    },
   },
 };
 
