@@ -105,3 +105,23 @@
   background: #65c4fa;
   filter: blur(150px);
 }
+
+.gradient-06 {
+  background: linear-gradient(
+    180deg,
+    #D46062 0%,
+    #880383 100%
+  );
+  border-radius: 24px;
+  filter: blur(40px);
+}
+
+.gradient-07 {
+  background: linear-gradient(
+    180deg,
+    #3E4EA7 0%,
+    #371D6D 100%
+  );
+  border-radius: 24px;
+  filter: blur(40px);
+}
