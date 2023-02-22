@@ -19,7 +19,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
       width={1000}
       height={1000}
       className="absolute w-full h-full object-cover rounded-[24px]"
-      priority={true}
+      priority="true"
     />
     {active !== id ? (
       <h3 className="font-semibold sm:text-[26px] text-[18px] text-white absolute z-0 lg:rotate-[-90deg] lg:bottom-20 lg:origin-[0,0]">
