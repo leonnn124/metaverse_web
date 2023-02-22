@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
 import style from '../styles';
@@ -13,12 +12,9 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
       active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'
     } flex items-center justify-center min-w-[170px] h-[700px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer`}
   >
-    <Image
+    <img
       src={imgUrl}
       alt={title}
-      width={3000}
-      height={1000}
-      priority="true"
       className="absolute w-full h-full object-cover rounded-[24px]"
     />
     {active !== id ? (
