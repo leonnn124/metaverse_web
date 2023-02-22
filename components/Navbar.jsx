@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { navVariants } from "../utils/motion";
-import style from "../styles";
+import { motion } from 'framer-motion';
+import { navVariants } from '../utils/motion';
+import style from '../styles';
 
 const Navbar = () => (
   <motion.nav

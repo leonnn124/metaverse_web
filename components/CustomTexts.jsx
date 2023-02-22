@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { textContainer, textVariant2 } from "../utils/motion";
+import { motion } from 'framer-motion';
+import { textContainer, textVariant2 } from '../utils/motion';
 
 export const TypingText = ({ title, textStyle }) => (
   <motion.p
@@ -10,7 +10,7 @@ export const TypingText = ({ title, textStyle }) => (
   >
     {Array.from(title).map((letter, index) => (
       <motion.span key={index} variants={textVariant2}>
-        {letter === " " ? "\u00A0" : letter}
+        {letter === ' ' ? '\u00A0' : letter}
       </motion.span>
     ))}
   </motion.p>
