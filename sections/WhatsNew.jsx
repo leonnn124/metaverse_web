@@ -1,10 +1,11 @@
-"use client";
+'use client';
 
-import { TypingText, NewFeatures, TitleText } from "../components";
-import { motion } from "framer-motion";
-import { staggerContainer, fadeIn, planetVariants } from "../utils/motion";
-import { newFeatures } from "../constants";
-import style from "../styles";
+import Image from 'next/image';
+import { TypingText, NewFeatures, TitleText } from '../components';
+import { motion } from 'framer-motion';
+import { staggerContainer, fadeIn, planetVariants } from '../utils/motion';
+import { newFeatures } from '../constants';
+import style from '../styles';
 
 const WhatsNew = () => (
   <section className={`${style.paddings} relative z-10`}>
@@ -16,7 +17,7 @@ const WhatsNew = () => (
       className={`${style.innerWidth} mx-auto flex lg:flex-row flex-col gap-8`}
     >
       <motion.div
-        variants={fadeIn("left", "tween", 0.2, 1)}
+        variants={fadeIn('left', 'tween', 0.2, 1)}
         className="flex-[0.75] flex justify-center flex-col"
       >
         <TypingText title="| What's New?" />
@@ -28,10 +29,13 @@ const WhatsNew = () => (
         </div>
       </motion.div>
       <motion.div
-        variants={planetVariants("right")}
+        variants={planetVariants('right')}
         className={`flex-1 ${style.flexCenter}`}
       >
-        <img
+        <Image
+          width={100}
+          height={100}
+          priority
           src="/whats-new.png"
           alt="whats-new"
           className="w-[90%] h-[90%] object-contain"

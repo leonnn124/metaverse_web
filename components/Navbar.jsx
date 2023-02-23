@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { navVariants } from '../utils/motion';
 import style from '../styles';
@@ -14,9 +15,12 @@ const Navbar = () => (
     <div className="absolute w-[50%] inset-0 gradient-01" />
 
     <div className={`${style.innerWidth} mx-auto flex justify-between gap-8`}>
-      <img
+      <Image
         src="/search.svg"
         alt="search"
+        width={100}
+        height={100}
+        priority
         className="w-[24px] h-[24px] object-contain"
       />
 
@@ -24,9 +28,12 @@ const Navbar = () => (
         METAVERSE
       </h2>
 
-      <img
+      <Image
         src="/menu.svg"
         alt="menu"
+        width={100}
+        height={100}
+        priority
         className="w-[24px] h-[24px] object-contain"
       />
     </div>
